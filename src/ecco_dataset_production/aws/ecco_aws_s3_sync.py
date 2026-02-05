@@ -52,16 +52,14 @@ def sync_local_to_remote( src=None, dest=None, nproc=1, dryrun=False,
             'WARNING', 'ERROR' or 'CRITICAL').  If called by a top-level
             application, the default will be that of the parent logger ('edp'),
             or 'WARNING' if called in standalone mode.
-        **kwargs: Depending on the invocation context, additional arguments that
-            may be necessary include:
-            keygen (str): If aws_s3_sync is invoked within an SSO environment,
-                keygen can be used to provide the name of a requried federated
-                login key generation script (e.g.,
-                /usr/local/bin/aws-login-pub.darwin.amd64). Note that keygen is
-                not necessary if aws_s3_sync is invoked within an AWS
-                IAM-managed application.
-            profile (str): Optional profile to be used in combination with
-                keygen (e.g., 'saml-pub', 'default', etc.)
+        \*\*kwargs: Depending on the invocation context, additional arguments that
+            may be necessary include: ``keygen`` (str) - If aws_s3_sync is
+            invoked within an SSO environment, keygen can be used to provide the
+            name of a requried federated login key generation script (e.g.,
+            /usr/local/bin/aws-login-pub.darwin.amd64). Note that keygen is not
+            necessary if aws_s3_sync is invoked within an AWS IAM-managed
+            application. ``profile`` (str) - Optional profile to be used in
+            combination with keygen (e.g., 'saml-pub', 'default', etc.)
 
     """
     log = logging.getLogger('edp.'+__name__)
@@ -181,16 +179,14 @@ def sync_remote_to_remote_or_local( src=None, dest=None,
             'WARNING', 'ERROR' or 'CRITICAL').  If called by a top-level
             application, the default will be that of the parent logger ('edp'),
             or 'WARNING' if called in standalone mode.
-        **kwargs: Depending on the invocation context, additional arguments that
-            may be necessary include:
-            keygen (str): If aws_s3_sync is invoked within an SSO environment,
-                keygen can be used to provide the name of a requried federated
-                login key generation script (e.g.,
-                /usr/local/bin/aws-login-pub.darwin.amd64). Note that keygen is
-                not necessary if aws_s3_sync is invoked within an AWS
-                IAM-managed application.
-            profile (str): Optional profile to be used in combination with
-                keygen (e.g., 'saml-pub', 'default', etc.)
+        \*\*kwargs: Depending on the invocation context, additional arguments that
+            may be necessary include: ``keygen`` (str) - If aws_s3_sync is
+            invoked within an SSO environment, keygen can be used to provide the
+            name of a requried federated login key generation script (e.g.,
+            /usr/local/bin/aws-login-pub.darwin.amd64). Note that keygen is not
+            necessary if aws_s3_sync is invoked within an AWS IAM-managed
+            application. ``profile`` (str) - Optional profile to be used in
+            combination with keygen (e.g., 'saml-pub', 'default', etc.)
 
     """
     log = logging.getLogger('edp.'+__name__)
@@ -248,16 +244,14 @@ def aws_s3_sync(
             'WARNING', 'ERROR' or 'CRITICAL').  If called by a top-level
             application, the default will be that of the parent logger ('edp'),
             or 'WARNING' if called in standalone mode.
-        **kwargs: Depending on the invocation context, additional arguments that
-            may be necessary include:
-            keygen (str): If aws_s3_sync is invoked within an SSO environment,
-                keygen can be used to provide the name of a requried federated
-                login key generation script (e.g.,
-                /usr/local/bin/aws-login-pub.darwin.amd64). Note that keygen is
-                not necessary if aws_s3_sync is invoked within an AWS
-                IAM-managed application.
-            profile (str): Optional profile to be used in combination with
-                keygen (e.g., 'saml-pub', 'default', etc.)
+        \*\*kwargs: Depending on the invocation context, additional arguments that
+            may be necessary include: ``keygen`` (str) - If aws_s3_sync is
+            invoked within an SSO environment, keygen can be used to provide the
+            name of a requried federated login key generation script (e.g.,
+            /usr/local/bin/aws-login-pub.darwin.amd64). Note that keygen is not
+            necessary if aws_s3_sync is invoked within an AWS IAM-managed
+            application. ``profile`` (str) - Optional profile to be used in
+            combination with keygen (e.g., 'saml-pub', 'default', etc.)
 
     """
     log = logging.getLogger('edp.'+__name__)

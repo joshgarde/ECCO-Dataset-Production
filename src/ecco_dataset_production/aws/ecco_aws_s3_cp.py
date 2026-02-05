@@ -17,16 +17,14 @@ def aws_s3_cp(
         dryrun (bool): Set AWS S3 CLI argument '--dryrun'.
         log_level (str): log_level choices per Python logging module
             ('DEBUG','INFO','WARNING','ERROR' or 'CRITICAL'; default='WARNING').
-        **kwargs: Depending on the invocation context, additional arguments that
-            may be necessary include:
-            keygen (str): If aws_s3_cp is invoked within an SSO environment,
-                keygen can be used to provide the name of a requried federated
-                login key generation script (e.g.,
-                /usr/local/bin/aws-login-pub.darwin.amd64). Note that keygen is
-                not necessary if aws_s3_cp is invoked within an AWS IAM-managed
-                application.
-            profile (str): Optional profile to be used in combination with
-                keygen (e.g., 'saml-pub', 'default', etc.)
+        \*\*kwargs: Depending on the invocation context, additional arguments that
+            may be necessary include: ``keygen`` (str) - If aws_s3_cp is invoked
+            within an SSO environment, keygen can be used to provide the name of
+            a requried federated login key generation script (e.g.,
+            /usr/local/bin/aws-login-pub.darwin.amd64). Note that keygen is not
+            necessary if aws_s3_cp is invoked within an AWS IAM-managed
+            application. ``profile`` (str) - Optional profile to be used in
+            combination with keygen (e.g., 'saml-pub', 'default', etc.)
 
     """
     log = logging.getLogger('edp.'+__name__)

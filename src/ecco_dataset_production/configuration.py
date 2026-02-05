@@ -18,13 +18,13 @@ class ECCODatasetProductionConfig(dict):
     Args:
         cfgfile (str): (Path and) filename of configuration file (yaml format),
             or similar remote location given by AWS S3 bucket/prefix/filename.
-        **kwargs: If cfgfile references an AWS S3 endpoint and if running within
+        \*\*kwargs: If cfgfile references an AWS S3 endpoint and if running within
             an institutionally-managed AWS IAM Identity Center (SSO)
             environment, additional arguments that may be necessary include:
-            keygen (str): Federated login key generation script (e.g.,
-                /usr/local/bin/aws-login-pub.darwin.amd64).
-            profile (str): Optional profile to be used in combination with
-                keygen (e.g., 'default', 'saml-pub', etc.)
+            ``keygen`` (str) - Federated login key generation script (e.g.,
+            /usr/local/bin/aws-login-pub.darwin.amd64). ``profile`` (str) -
+            Optional profile to be used in combination with keygen (e.g.,
+            'default', 'saml-pub', etc.)
 
     Attributes:
         cfgfile (str): Local store of cfgfile input string.

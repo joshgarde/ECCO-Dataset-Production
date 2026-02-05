@@ -36,14 +36,13 @@ class ECCOGrid(object):
             (containing XC.*, YC.*, *latlon*.nc, *native*.nc, etc. files), or
             similar remote location given by AWS S3 bucket/prefix.  Either
             grid_loc or task may be provided but not both.
-        **kwargs: If either task or grid_loc reference an AWS S3 endpoint and if
+        \*\*kwargs: If either task or grid_loc reference an AWS S3 endpoint and if
             running within an institutionally-managed AWS IAM Identity Center
             (SSO) environment, additional arguments that may be necessary
-            include:
-            keygen (str): Federated login key generation script (e.g.,
-                /usr/local/bin/aws-login-pub.darwin.amd64).
-            profile (str): Optional profile to be used in combination with
-                keygen (e.g., 'default', 'saml-pub', etc.)
+            include: ``keygen`` (str) - Federated login key generation script
+            (e.g., /usr/local/bin/aws-login-pub.darwin.amd64). ``profile`` (str)
+            - Optional profile to be used in combination with keygen (e.g.,
+            'default', 'saml-pub', etc.)
 
     Attributes:
         task (ECCOTask): If provided, local object store of input task
